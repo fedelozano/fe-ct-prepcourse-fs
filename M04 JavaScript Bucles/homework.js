@@ -182,6 +182,16 @@ function esPrimo(num) { // 7
    // [Pista 2]: puedes resolverlo utilizando un `bucle for`.
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
+   if (num <= 1) return false; // Los números negativos, 0 y 1 NO son primos.
+
+  for (let i = 2; i <= Math.sqrt(num); i++) {//i=
+    if (num % i === 0) {
+      // Si el número es divisible por algún número diferente a 1 y a sí mismo, no es primo.
+      return false;
+    }
+  }
+
+  return true;
 }
 
 function esVerdadero(valor) {
